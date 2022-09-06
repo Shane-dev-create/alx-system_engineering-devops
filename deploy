@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd ..
 echo "Enter git message"
 read message
 git add .
