@@ -19,7 +19,7 @@ echo "Ceci n'est pas une page" |sudo tee /var/www/html/404.html
 
 #configure server redirect and add header displaying hostname
 file="/etc/nginx/sites-available/default"
-sudo sed -i "21i add_header X-Served-By $HOSTNAME;" $file
+sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
 
 #restart server after settings update
 sudo service nginx restart
