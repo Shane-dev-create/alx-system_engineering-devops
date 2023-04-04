@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#set up a custom header
+# set up a custom header
 sudo apt-get -y
 sudo apt-get -y install nginx
 
@@ -17,9 +17,9 @@ echo 'Hello World!' |sudo tee  /var/www/html/index.html
 # create a webpage for error 404
 echo "Page not found" |sudo tee /var/www/html/404.html
 
-#configure server redirect and add header displaying hostname
+# configure server redirect and add header displaying hostname
 string_for_replacement="server_name _;\n\tadd_header X-Served-By \$hostname;
 sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
 
-#restart server after settings update
+# restart server after settings update
 sudo service nginx restart
