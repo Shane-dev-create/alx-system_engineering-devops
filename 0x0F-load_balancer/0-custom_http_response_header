@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#set up a custom header
+sudo apt-get -y
+sudo apt-get -y install nginx
+
+#configure server redirect and add header displaying hostname
+file="/etc/nginx/sites-available/default"
+sudo sed -i "21i add_header X-Served-By $HOSTNAME;" $file
+
+#restart server after settings update
+sudo service nginx restart
