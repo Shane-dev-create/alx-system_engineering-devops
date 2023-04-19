@@ -32,7 +32,7 @@ EOF
 
 # Update hostname configuration
 sudo bash -c 'echo "18.234.193.38" > /etc/hostname'
-sudo bash -c 'echo "54.174.7.102" >> /etc/hostname'
+sudo bash -c 'echo "54.196.32.245" >> /etc/hostname'
 
 # Enable HAproxy init script
 sudo sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/haproxy
