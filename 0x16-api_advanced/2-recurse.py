@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Recursive function that queries Reddit API and returns list of all hot articles on a given subreddit"""
+"""Recursive function that queries and returns list of all hot articles on a given subreddit"""
 import requests
 
 
